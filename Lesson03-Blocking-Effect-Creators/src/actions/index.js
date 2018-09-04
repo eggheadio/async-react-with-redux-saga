@@ -1,4 +1,4 @@
-import { call, put, take } from "redux-saga/effects";
+import { call, put, take, race, all } from "redux-saga/effects";
 import * as TYPES from "../types";
 
 const api = url => fetch(url).then(response => response.json());
